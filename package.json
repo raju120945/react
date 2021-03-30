@@ -1,0 +1,25 @@
+{
+  "name": "react-login-page",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "set PORT=12345 && react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "homepage": "https://raju120945.github.io/react"
+}
