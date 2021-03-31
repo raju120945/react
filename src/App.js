@@ -16,7 +16,8 @@ class App extends Component {
 			"tag":"test",
 			"path":"/home/mounika.motam/fortigate/end.yml"
 		};
-		request.open("POST", 'http://127.0.0.1:8000/task_list/', requestBody);
+		request.setRequestHeader("Content-Type", "application/json");
+		request.send("POST", 'http://172.22.110.190:9020/task_list/', JSON.stringify(requestBody));
 		request.onreadystatechange = () => {
 			if (R.equals(request.readyState, 4)) {
 				const res = JSON.parse(request.response);
@@ -28,8 +29,7 @@ class App extends Component {
 			}
 
 		};
-		request.setRequestHeader("Content-Type", "application/json");
-		request.send();
+		// request.send();
 	}
 
 	render() {
