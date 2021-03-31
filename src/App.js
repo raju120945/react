@@ -11,7 +11,12 @@ class App extends Component {
 
 	getDetails = () => {
 		letrequest = newXMLHttpRequest();
-		request.open("GET", `http://localhost:7777/chatRooms/${id}​​​​​​​​/messages`);
+		let requestBody = {
+			"params":"hostt=172.22.110.190 cmdd=pwd",
+			"tag":"test",
+			"path":"/home/mounika.motam/fortigate/end.yml"
+		};
+		request.open("POST", 'http://127.0.0.1:8000/task_list/', requestBody);
 		request.onreadystatechange = () => {
 			if (R.equals(request.readyState, 4)) {
 				const res = JSON.parse(request.response);
